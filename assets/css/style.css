@@ -34,6 +34,12 @@ h4 {
   /* text-shadow: 4px 4px 4px #aaa; */
 }
 
+br {
+  display: block;
+  margin: 1.5rem 0;
+  content: "";
+}
+
 /* Buttons */
 
 .btn-primary {
@@ -70,7 +76,7 @@ h4 {
 }
 
 .btn-outline-custom:hover {
-    background-color: var(--highlight-color);
+    background-color: var(--highlight-color-light);
     color: var(--secondary-color);
     transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
@@ -86,7 +92,7 @@ header {
 
 /* Main */
 
-.intro {
+.card {
   text-align: center;
   background-color: var(--secondary-color);
   padding: 20px;
@@ -95,23 +101,38 @@ header {
   border-radius: 10px;
 }
 
-.quiz {
-  background-color: var(--secondary-color);
-  padding: 20px;
-  margin: 20px;
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+#quiz-image {
+    width: 200px;
+    border-radius: 10px;
+    margin-bottom: 2rem;
 }
 
-.quiz h2 {
-    text-align: center;
+/* Footer */
+
+footer {
+  background-color: #fff;
+  color: var(--primary-color);
+  text-align: center;
+  padding: 20px;
 }
 
-.results {
-    text-align: center;
-  background-color: var(--secondary-color);
-  padding: 20px;
-  margin: 20px;
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+footer a {
+  text-decoration: none;
+}
+
+footer .social-links i {
+  color: var(--highlight-color-light);
+  font-size: 1.9rem;
+  margin: 0 10px;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+footer .social-links i:hover {
+  color: var(--secondary-color);
+}
+
+footer .table-dark * {
+  background-color: transparent;
 }
