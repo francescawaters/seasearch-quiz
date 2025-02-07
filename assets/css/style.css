@@ -85,9 +85,11 @@ br {
 
 header {
   background-color: #fff;
-  color: rgb(32, 44, 216);
-  text-align: center;
   padding: 10px;
+}
+
+#logo {
+  max-width: 250px;
 }
 
 /* Main */
