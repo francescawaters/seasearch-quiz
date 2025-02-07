@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Cnidaria Name 1",
+    "phylum": "Cnidaria",
+    "image": "assets/images/cnidaria1.jpg"
+  },
+  {
+    "name": "Cnidaria Name 2",
+    "phylum": "Cnidaria",
+    "image": "assets/images/cnidaria2.jpg"
+  },
+  {
+    "name": "Cnidaria Name 3",
+    "phylum": "Cnidaria",
+    "image": "assets/images/cnidaria3.jpg"
+  },
+  {
+    "name": "Cnidaria Name 4",
+    "phylum": "Cnidaria",
+    "image": "assets/images/cnidaria4.jpg"
+  },
+  {
+    "name": "Cnidaria Name 5",
+    "phylum": "Cnidaria",
+    "image": "assets/images/cnidaria5.jpg"
+  },
+  {
+    "name": "Cnidaria Name 6",
+    "phylum": "Cnidaria",
+    "image": "assets/images/cnidaria6.jpg"
+  },
+  {
+    "name": "Cnidaria Name 7",
+    "phylum": "Cnidaria",
+    "image": "assets/images/cnidaria7.jpg"
+  },
+  {
+    "name": "Cnidaria Name 8",
+    "phylum": "Cnidaria",
+    "image": "assets/images/cnidaria8.jpg"
+  },
+  {
+    "name": "Cnidaria Name 9",
+    "phylum": "Cnidaria",
+    "image": "assets/images/cnidaria9.jpg"
+  },
+  {
+    "name": "Cnidaria Name 10",
+    "phylum": "Cnidaria",
+    "image": "assets/images/cnidaria10.jpg"
+  }
+]

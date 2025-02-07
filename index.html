@@ -74,11 +74,11 @@
                     <h2>Marine Species Identification Quiz</h2>
                   </div>
                   <div class="card-body">
-                    <div class="col-12 col-md-8 col-lg-8 mx-auto">
+                    <div class="col-12 col-md-6 col-lg-4 mx-auto">
                       <img
                         id="quiz-image"
-                        src="assets/images/black-tar.jpg"
-                        alt="Marine Species"
+                        src=""
+                        alt=""
                         class="img-fluid"
                       />
                       <div id="quiz-question" class="mb-3">
@@ -87,40 +87,15 @@
                     </div>
                     <form id="quiz-form">
                       <div class="container-fluid col-xs-12 col-md-8 col-lg-6 ">
-                      <div class="d-flex flex-column" id="quiz-options">
-                        <button
-                          type="button"
-                          class="btn btn-options btn-block mb-2 flex-grow-1"
-                          data-value="option1"
-                        >
-                          black tar sponge
-                        </button>
-                        <button
-                          type="button"
-                          class="btn btn-options btn-block mb-2 flex-grow-1"
-                          data-value="option2"
-                        >
-                          Option 2
-                        </button>
-                        <button
-                          type="button"
-                          class="btn btn-options btn-block mb-2 flex-grow-1"
-                          data-value="option3"
-                        >
-                          Option 3
-                        </button>
-                        <button
-                          type="button"
-                          class="btn btn-options btn-block mb-2"
-                          data-value="option4"
-                        >
-                          Option 4
-                        </button>
-                      </div>
+                        <ul id="quiz-options" class="list-group"></ul>
+                          <li class="quiz-options" data-value="option1">black tar sponge</li>
+                          <li class="quiz-options" data-value="option2">Option 2</li>
+                          <li class="quiz-options" data-value="option3">Option 3</li>
+                          <li class="quiz-options" data-value="option4">Option 4</li>
+                        </ul>
                     </div>
-                      <input type="hidden" name="quiz-option" id="quiz-option" />
                       <div class="text-center">
-                        <button type="submit" class="btn btn-primary">
+                        <button id="submitButton" type="submit" class="btn btn-primary">
                           Submit Answer
                         </button>
                       </div>

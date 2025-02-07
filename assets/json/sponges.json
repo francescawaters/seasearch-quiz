@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Black Tar Sponge",
+        "phylum": "Porifera",
+        "image": "assets/images/black-tar.jpg"
+    },
+    {
+        "name": "Elephant Hide Sponge",
+        "phylum": "Porifera",
+        "image": "assets/images/elephant-hide-sponge.jpg"
+    },
+    {
+        "name": "Breadcrumb Sponge",
+        "phylum": "Porifera",
+        "image": "assets/images/breadcrumb-sponge.jpg"
+    },
+    {
+        "name": "Crater Sponge",
+        "phylum": "Porifera",
+        "image": "assets/images/crater-sponge.jpg"
+    },
+    {
+        "name": "Boring Sponge",
+        "phylum": "Porifera",
+        "image": "assets/images/boring-sponge.jpg"
+    },
+    {
+        "name": "Sea Orange",
+        "phylum": "Porifera",
+        "image": "assets/images/sea-orange.jpg"
+    },
+    {
+        "name": "Yellow Hedgehog Sponge",
+        "phylum": "Porifera",
+        "image": "assets/images/yellow-hedgehog-sponge.jpg"
+    },
+    {
+        "name": "Golf Ball Sponge",
+        "phylum": "Porifera",
+        "image": "assets/images/golf-ball-sponge.jpg"
+    },
+    {
+        "name": "Goosebump Sponge",
+        "phylum": "Porifera",
+        "image": "assets/images/goosebump-sponge.jpg"
+    },
+    {
+        "name": "Volcano Sponge",
+        "phylum": "Porifera",
+        "image": "assets/images/volcano-sponge.jpg"
+    }
+]

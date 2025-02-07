@@ -1,24 +1,97 @@
-
-$(document).ready(function() {
-    $('.btn-outline-primary').click(function() {
-        $('.btn-outline-primary').removeClass('active');
-        $(this).addClass('active');
-        $('#quiz-option').val($(this).data('value'));
-    });
-
-    $('#quiz-form').submit(function(event) {
-        event.preventDefault();
-        // Handle form submission
-        alert('Selected option: ' + $('#quiz-option').val());
-    });
-
-    $('#play-now').click(function() {
-        const selectedLevel = $('#level-select').val();
-        if (selectedLevel === "Select Level") {
-            alert('Please select a level to start the quiz.');
-        } else {
-            // Handle starting the quiz with the selected level
-            alert('Starting quiz at level: ' + selectedLevel);
-        }
-    });
+document.addEventListener("DOMContentLoaded", function () {
+    eventListeners();
 });
+
+// Global Variables
+
+const playNowButton = document.getElementById("play-now");
+const levelSelect = document.getElementById("level-select");
+const quizImage = document.getElementById("quiz-image");
+const phylum = document.getElementById("phylum");
+const optionsElement = document.querySelector('.quiz-options');
+const submitButton = document.getElementById("submit-button");
+const feedbackMessage = document.getElementById("feedback-message");
+const playAgainButtonElement = document.getElementById("play-again");
+
+let correctScore = 0;
+let questionsAsked = 0;
+let totalQuestions = sessionStorage.getItem("questionCount");
+
+
+// ADD EVENT LISTENERS
+function eventListeners() {
+  playNowButton.addEventListener("click", playNow);
+//   submitButton.addEventListener("click", checkAnswer);
+}
+
+function playNow() {
+  const selectedLevel = levelSelect.value;
+  let jsonFile = "";
+
+  if (selectedLevel === "1") {
+    jsonFile = "assets/json/sponges.json";
+  } else if (selectedLevel === "2") {
+    jsonFile = "assets/json/cnidaria.json";
+  }
+  //   continue with all level select options
+
+  if (jsonFile) {
+    fetch(jsonFile)
+      .then((response) => response.json())
+      .then((data) => {
+        populateQuiz(data);
+      })
+      .catch((error) =>
+        console.error(`Error fetching data from ${jsonFile}:`, error)
+      );
+  }
+
+  function populateQuiz(data) {
+    if (data.length > 0) {
+      const randomIndex = Math.floor(Math.random() * data.length);
+      const selectedObject = data[randomIndex];
+      quizImage.src = selectedObject.image;
+      phylum.innerHTML = selectedObject.phylum;
+      const correctOption = selectedObject;
+      const otherOptions = data
+        .filter((_, index) => index !== randomIndex)
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 3);
+      const options = [correctOption, ...otherOptions].sort(
+        () => 0.5 - Math.random()
+      );
+    }
+  }
+  selectOption();
+}
+
+function selectOption() {
+    let options = document.querySelectorAll(".quiz-options");
+
+    for (let option of options) {
+        option.addEventListener("click", function() {
+            options.forEach(opt => opt.classList.remove("selected"));
+            option.classList.add("selected");
+        });
+    }
+}
+
+// function checkAnswer() {
+//   let submitButton = document.getElementById("submitButton");
+//   let 
+//     let userSubmission = 
+
+//   if (userSubmission === correctOption.name) {
+//     alert = "Correct!";
+//     incrementScore();
+//   } else {
+//     alert = "Incorrect!";
+//   }
+//   incrementQuestion();
+// }
+
+// function calculateCorrectAnswer() {}
+
+// function incrementScore() {}
+
+// function incrementQuestion() {}

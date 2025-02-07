@@ -85,22 +85,6 @@ p {
     transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-.btn-options {
-  border: #034c8c solid 1px;
-  color: #034c8c;
-  padding: 0.5rem 1rem;
-  border-radius: 1rem;
-  cursor: pointer;
-  font-size: 1rem;
-  text-transform: capitalize;
-  text-align: start;
-}
-
-.btn-options:hover {
-  background-color: var(--highlight-color-light);
-  color: var(--secondary-color);
-  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
-}
 
 /* Header */
 
@@ -149,6 +133,31 @@ header {
   font-size: 1.5rem;
   font-family: var(--secondary-font);
   color: var(--primary-color);
+}
+
+.quiz-options {
+  border: #034c8c solid 1px;
+  color: #034c8c;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: capitalize;
+  text-align: start;
+  list-style: none;
+}
+
+.quiz-options:hover {
+  background-color: var(--highlight-color-light);
+  color: var(--secondary-color);
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.selected {
+  background-color: var(--highlight-color-light);
+  color: var(--secondary-color);
+  box-shadow: 4px 4px 0 0 var(--highlight-color) !important;
 }
 
 /* Footer */
