@@ -107,6 +107,7 @@ p {
 header {
   background-color: #fff;
   padding: 10px;
+  box-shadow: 0 0 10px 1px rgba(3, 76, 140, 0.5);
 }
 
 #logo {
