@@ -34,12 +34,6 @@ h4 {
   /* text-shadow: 4px 4px 4px #aaa; */
 }
 
-br {
-  display: block;
-  margin: 1.5rem 0;
-  content: "";
-}
-
 /* Buttons */
 
 .btn-primary {
@@ -133,8 +127,4 @@ footer .social-links i {
 
 footer .social-links i:hover {
   color: var(--secondary-color);
-}
-
-footer .table-dark * {
-  background-color: transparent;
 }
