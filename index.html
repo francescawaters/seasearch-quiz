@@ -39,12 +39,12 @@
             <div class="row justify-content-center">
               <div class="col-md-10 col-lg-8">
                 <div class="card">
-                  <div class="card-header text-center">
+                  <div class="text-center">
                     <h2>Welcome to the Marine Species Identification Quiz</h2>
                   </div>
                   <div class="card-body text-center">
                     <p>Select your level and click "Play Now" to start the quiz.</p>
-                    <div class="mb-5">
+                    <div class="col-12 col-md-6 col-lg-4 mx-auto">
                       <select class="form-select" id="level-select">
                         <option selected>Select Level</option>
                         <option value="1">Level 1</option>
@@ -67,15 +67,18 @@
             </div>
       </section>
 
-          <!-- Quiz Section -->
+      <!-- Quiz Section -->
       <section id="quiz">
-            <div class="row justify-content-center mt-5">
+            <div class="row justify-content-center  mt-5">
               <div class="col-md-10 col-lg-8">
                 <div class="card">
-                  <div class="card-header text-center">
+                  <div class="text-center">
                     <h2>Marine Species Identification Quiz</h2>
                   </div>
                   <div class="card-body">
+                    <div id="quiz-question" class="mb-3 text-center">
+                      <p><span id="number">2.</span> What kind of <span id="phylum">sponge</span> is this?</p>
+                    </div>
                     <div>
                       <img
                         id="quiz-image"
@@ -85,36 +88,38 @@
                       />
                     </div>
                     <form id="quiz-form">
-                      <div class="mb-3 text-center">
+                      <div class="container-fluid col-xs-12 col-md-8 col-lg-6 ">
+                      <div class="d-flex flex-column" id="quiz-options">
                         <button
                           type="button"
-                          class="btn btn-outline-custom btn-block mb-2"
+                          class="btn btn-options btn-block mb-2 flex-grow-1"
                           data-value="option1"
                         >
-                          Option 1
+                          black tar sponge
                         </button>
                         <button
                           type="button"
-                          class="btn btn-outline-custom btn-block mb-2"
+                          class="btn btn-options btn-block mb-2 flex-grow-1"
                           data-value="option2"
                         >
                           Option 2
                         </button>
                         <button
                           type="button"
-                          class="btn btn-outline-custom btn-block mb-2"
+                          class="btn btn-options btn-block mb-2 flex-grow-1"
                           data-value="option3"
                         >
                           Option 3
                         </button>
                         <button
                           type="button"
-                          class="btn btn-outline-custom btn-block mb-2"
+                          class="btn btn-options btn-block mb-2"
                           data-value="option4"
                         >
                           Option 4
                         </button>
                       </div>
+                    </div>
                       <input type="hidden" name="quiz-option" id="quiz-option" />
                       <div class="text-center">
                         <button type="submit" class="btn btn-primary">
@@ -123,26 +128,26 @@
                       </div>
                     </form>
                     <div id="feedback-message" class="mt-3 text-center">
-                      You're right!
+                      <p>You're right!</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
       </section>
-
-          <!-- Results section -->
+      
+      <!-- Results section -->
       <section id="quiz-results">
             <div class="row justify-content-center mt-5">
               <div class="col-md-10 col-lg-8">
                 <div class="card">
-                  <div class="card-header text-center">
+                  <div class="text-center">
                     <h2>Quiz Results</h2>
                   </div>
                   <div class="card-body text-center">
                     <p id="results-message">Your results will be displayed here.</p>
                     <button id="retry-quiz" class="btn btn-outline-custom">
-                      <strong>Play again!</strong>
+                      Play again!
                     </button>
                   </div>
                 </div>
