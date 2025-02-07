@@ -37,7 +37,7 @@
       <section>
           <div class="container-fluid">
             <div class="row justify-content-center">
-              <div class="col-md-10 col-lg-8">
+              <div class="col-md-10 col-lg-6">
                 <div class="card">
                   <div class="text-center">
                     <h2>Welcome to the Marine Species Identification Quiz</h2>
@@ -46,18 +46,16 @@
                     <p>Select your level and click "Play Now" to start the quiz.</p>
                     <div class="col-12 col-md-6 col-lg-4 mx-auto">
                       <select class="form-select" id="level-select">
-                        <option selected>Select Level</option>
-                        <option value="1">Level 1</option>
-                        <option value="2">Level 2</option>
-                        <option value="3">Level 3</option>
-                        <option value="4">Level 4</option>
-                        <option value="5">Level 5</option>
-                        <option value="6">Level 6</option>
-                        <option value="7">Level 7</option>
-                        <option value="8">Level 8</option>
-                        <option value="9">Level 9</option>
-                        <option value="10">Level 10</option>
-                        <option value="11">Level 11</option>
+                        <option value="1">Sponges (Porifera)</option>
+                        <option value="2">Sea anemones, corals & jellyfish (Cnidaria)</option>
+                        <option value="3">Worms (Annelida)</option>
+                        <option value="4">Molluscs (Mollusca)</option>
+                        <option value="5">Crustaceans (Arthropoda)</option>
+                        <option value="6">Sea mats, horn wrack & lace corals (Bryozoa)</option>
+                        <option value="7">Starfish, brittlestars, sea urchins & sea cucumbers (Echinodermata)</option>
+                        <option value="8">Fish and mammals (Chordata)</option>
+                        <option value="9">Red and green seaweeds, stoneworts & flowering plants (Plantae)</option>
+                        <option value="10" selected>All species</option>
                       </select>
                     </div>
                     <button id="play-now" class="btn btn-primary">Play Now</button>
@@ -72,20 +70,20 @@
             <div class="row justify-content-center  mt-5">
               <div class="col-md-10 col-lg-8">
                 <div class="card">
-                  <div class="text-center">
+                  <div class="">
                     <h2>Marine Species Identification Quiz</h2>
                   </div>
                   <div class="card-body">
-                    <div id="quiz-question" class="mb-3 text-center">
-                      <p><span id="number">2.</span> What kind of <span id="phylum">sponge</span> is this?</p>
-                    </div>
-                    <div class="col-12 col-md-8 col-lg-6 mx-auto">
+                    <div class="col-12 col-md-8 col-lg-8 mx-auto">
                       <img
                         id="quiz-image"
                         src="assets/images/black-tar.jpg"
                         alt="Marine Species"
                         class="img-fluid"
                       />
+                      <div id="quiz-question" class="mb-3">
+                      <p><span id="number">2.</span> What kind of <span id="phylum">sponge</span> is this?</p>
+                    </div>
                     </div>
                     <form id="quiz-form">
                       <div class="container-fluid col-xs-12 col-md-8 col-lg-6 ">
@@ -139,13 +137,13 @@
       <!-- Results section -->
       <section id="quiz-results">
             <div class="row justify-content-center mt-5">
-              <div class="col-md-10 col-lg-8">
+              <div class="col-md-10 col-lg-6">
                 <div class="card">
                   <div class="text-center">
                     <h2>Quiz Results</h2>
                   </div>
                   <div class="card-body text-center">
-                    <p id="results-message">Your results will be displayed here.</p>
+                    <p id="results-message">Congratulations! You scored <span id="score">7/10</span>.</p>
                     <button id="retry-quiz" class="btn btn-outline-custom">
                       Play again!
                     </button>
@@ -217,7 +215,7 @@
       <div class="container section">
         <div class="row justify-content-center">
           <!-- Contact info -->
-          <div class="col-12 col-md-6 col-lg-4 text-center">
+          <div class="col-md-8 col-lg-6 text-center text-lg-start">
             <p>Send us your feedback or questions using the form below.</p>
 
             <a
@@ -229,7 +227,7 @@
             >
           </div>
 
-          <div class="col-12 col-md-6 text-center text-md-end">
+          <div class="col-md-8 col-lg-6 text-center text-lg-end">
             <div class="social-links my-4">
               <a
                 href="https://www.instagram.com"
