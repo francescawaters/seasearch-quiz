@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const playNowButton = document.getElementById("play-now");
 const levelSelect = document.getElementById("level-select");
+const quiz = document.getElementById("quiz");
 const quizImage = document.getElementById("quiz-image");
 const phylum = document.getElementById("phylum");
 let optionsElement = document.querySelectorAll(".quiz-options");
@@ -26,6 +27,7 @@ function eventListeners() {
 function playNow() {
   const selectedLevel = levelSelect.value;
   let jsonFile = "";
+  
 
   if (selectedLevel === "1") {
     jsonFile = "assets/json/sponges.json";
@@ -76,6 +78,10 @@ function playNow() {
   }
 
   selectOption();
+
+  document.getElementById("quiz").classList.remove("hidden");
+  document.getElementById("intro").classList.add("hidden");
+  quiz.scrollIntoView({ behavior: 'smooth' });
 }
 
 function selectOption() {
