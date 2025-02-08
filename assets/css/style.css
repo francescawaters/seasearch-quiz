@@ -17,6 +17,10 @@
 /* Global Styles */
 
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   font-family: var(--primary-font);
   background: url(../images/bg.jpg) no-repeat center center/cover;
   background-color: var(--secondary-color);
@@ -189,4 +193,19 @@ footer .social-links i {
 footer .social-links i:hover {
   color: #fff
   ;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 768px) {
+
+  #intro {
+    margin: 40px 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #intro {
+    margin: 15vh 0;
+  }
 }
