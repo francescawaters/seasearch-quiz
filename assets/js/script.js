@@ -3,18 +3,24 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Global Variables
-const playNowButton = document.getElementById("play-now");
-const levelSelect = document.getElementById("level-select");
-const quiz = document.getElementById("quiz");
-const quizImage = document.getElementById("quiz-image");
-const phylum = document.getElementById("phylum");
-const optionsElement = document.querySelectorAll(".quiz-options");
-const submitButton = document.getElementById("submit-button");
-const feedbackMessage = document.getElementById("feedback-message");
-const playAgainButtonElement = document.getElementById("play-again");
+const playNowButton = document.getElementById("play-now"); // play now button
+const quiz = document.getElementById("quiz"); // quiz container
+const questionNumber = document.getElementById("question-number"); // question number display
+const quizImage = document.getElementById("quiz-image"); // quiz image
+const optionsElement = document.querySelectorAll(".quiz-options"); // quiz options
+const submitButton = document.getElementById("submit-button"); // submit button
+const feedbackMessage = document.getElementById("feedback-message"); // feedback message
+const retryQuiz = document.getElementById("retry-quiz"); // play again button
+const nextQuestion = document.getElementById("next-question"); // next question button
 
 let correctScore = 0;
 let questionsAsked = 0;
+let data = [];
+let correctOption = "";
+let selectedAnswer = "";
+let options = [];
+
+const MAX_QUESTIONS = 10;
 
 // ADD EVENT LISTENERS
 function eventListeners() {
@@ -23,60 +29,47 @@ function eventListeners() {
 }
 
 function playNow() {
-  const selectedLevel = levelSelect.value;
-  const jsonFile = getJsonFile(selectedLevel);
-
-  if (jsonFile) {
-    fetch(jsonFile)
-      .then((response) => response.json())
-      .then((data) => {
-        populateQuiz(data);
-      })
-      .catch((error) =>
-        console.error(`Error fetching data from ${jsonFile}:`, error)
-      );
-  }
-
+  correctScore = 0;
+  questionsAsked = 0;
+  data = [];
   document.getElementById("quiz").classList.remove("hidden");
   document.getElementById("intro").classList.add("hidden");
   quiz.scrollIntoView({ behavior: "smooth" });
-}
 
-function getJsonFile(level) {
-  const jsonFiles = {
-    "1": "assets/json/sponges.json",
-    "2": "assets/json/cnidaria.json",
-    // Add other levels here
-  };
-  if (jsonFiles[level]) {
-    return jsonFiles[level];
-  } else {
-    console.error(`Invalid level: ${level}`);
-    return null;
-  }
-}
+  const selectedLevel = document.getElementById("level-select").value;
 
-function populateQuiz(data) {
+    // Update question count display if needed
+    questionNumber.innerHTML = `Question ${questionsAsked} of ${MAX_QUESTIONS}:`;
+
+  fetch(`./assets/json/${selectedLevel}.json`)
+    .then((response) => response.json())
+    .then((jsonData) => {
+      data = jsonData;
+      getRandomQuestions();
+    })
+    .catch((error) => console.error("Error fetching data:", error));
+}
+//  Need to add a function to get random questions
+function getRandomQuestions(count = 10) {
+  console.log(data);
   if (data.length > 0) {
     const randomIndex = Math.floor(Math.random() * data.length);
-    const selectedObject = data[randomIndex];
-    quizImage.src = selectedObject.image;
-    phylum.innerHTML = selectedObject.phylum;
+    const selectedAnswer = data[randomIndex];
+    quizImage.src = selectedAnswer.image;
 
-    const correctOption = selectedObject;
     const otherOptions = data
       .filter((_, index) => index !== randomIndex)
       .sort(() => 0.5 - Math.random())
       .slice(0, 3);
-    const options = [correctOption, ...otherOptions].sort(
+    const options = [selectedAnswer, ...otherOptions].sort(
       () => 0.5 - Math.random()
     );
 
-    populateOptions(options, correctOption);
+    populateOptions(options, selectedAnswer);
   }
 }
 
-function populateOptions(options, correctOption) {
+function populateOptions(options, selectedAnswer) {
   // Clear previous options
   optionsElement.forEach((element) => {
     element.innerHTML = "";
@@ -84,9 +77,9 @@ function populateOptions(options, correctOption) {
   });
 
   // Populate options
-  options.forEach((option, index) => {
+   options.forEach((option, index) => {
     optionsElement[index].innerHTML = option.name;
-    if (option === correctOption) {
+    if (option === selectedAnswer) {
       optionsElement[index].classList.add("correct");
     }
   });
@@ -113,6 +106,9 @@ function checkAnswer() {
   } else {
     feedbackMessage.innerHTML = "Incorrect!";
   }
+
+  nextQuestion.eventListeners("click", showNextQuestion);
+
   incrementQuestion();
 }
 
@@ -124,4 +120,10 @@ function incrementScore() {
 function incrementQuestion() {
   questionsAsked++;
   // Update question count display if needed
+}
+
+function showResults() {
+  quiz.classList.add("hidden");
+  document.getElementById("results").classList.remove("hidden");
+  document.getElementById("score").innerHTML = `You scored ${correctScore} out of ${MAX_QUESTIONS}`;
 }

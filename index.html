@@ -82,16 +82,17 @@
                         class="img-fluid"
                       />
                       <div id="quiz-question" class="mb-3">
-                      <p><span id="number">2.</span> What kind of <span id="phylum">sponge</span> is this?</p>
-                    </div>
+                      <p id="question-number"></p>
+                      <p>What species is this?</p>
+                      </div>
                     </div>
                     <form id="quiz-form">
                       <div class="container-fluid col-xs-12 col-md-8 col-lg-6 ">
                         <ul class="list-group">
-                          <li class="quiz-options" data-value="option1">black tar sponge</li>
-                          <li class="quiz-options" data-value="option2">Option 2</li>
-                          <li class="quiz-options" data-value="option3">Option 3</li>
-                          <li class="quiz-options" data-value="option4">Option 4</li>
+                          <li class="quiz-options" data-value="option1"></li>
+                          <li class="quiz-options" data-value="option2"></li>
+                          <li class="quiz-options" data-value="option3"></li>
+                          <li class="quiz-options" data-value="option4"></li>
                         </ul>
                     </div>
                       <div class="text-center">
@@ -102,6 +103,8 @@
                     </form>
                     <div id="feedback-message" class="mt-3 text-center">
                       <p>You're right!</p>
+                      <button id="next-question" class="btn btn-outline-custom">
+                        Next Question
                     </div>
                   </div>
                 </div>
