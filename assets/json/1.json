@@ -48,25 +48,5 @@
         "name": "Volcano Sponge",
         "phylum": "Porifera",
         "image": "assets/images/volcano-sponge.jpg"
-    },
-    {
-        "name": "Azure Vase Sponge",
-        "phylum": "Porifera",
-        "image": "assets/images/azure-vase-sponge.jpg"
-    },
-    {
-        "name": "Red Beard Sponge",
-        "phylum": "Porifera",
-        "image": "assets/images/red-beard-sponge.jpg"
-    },
-    {
-        "name": "Tube Sponge",
-        "phylum": "Porifera",
-        "image": "assets/images/tube-sponge.jpg"
-    },
-    {
-        "name": "Purple Vase Sponge",
-        "phylum": "Porifera",
-        "image": "assets/images/purple-vase-sponge.jpg"
     }
 ]

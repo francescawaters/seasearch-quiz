@@ -5,11 +5,12 @@ document.addEventListener("DOMContentLoaded", function () {
 // Global Variables
 const playNowButton = document.getElementById("play-now"); // play now button
 const quiz = document.getElementById("quiz"); // quiz container
-const questionNumber = document.getElementById("question-number"); // question number display
+let questionNumber = document.getElementById("question-number"); // question number
+const intro = document.getElementById("intro"); // intro section
 const quizImage = document.getElementById("quiz-image"); // quiz image
 const optionsElement = document.querySelectorAll(".quiz-options"); // quiz options
 const submitButton = document.getElementById("submit-button"); // submit button
-const feedbackMessage = document.getElementById("feedback-message"); // feedback message
+let feedbackMessage = document.getElementById("feedback-message"); // feedback message
 const retryQuiz = document.getElementById("retry-quiz"); // play again button
 const nextQuestion = document.getElementById("next-question"); // next question button
 
@@ -19,22 +20,21 @@ let data = [];
 let correctOption = "";
 let selectedAnswer = "";
 let options = [];
-let randomQuestions = [];
+const randomQuestions = [];
 
 const MAX_QUESTIONS = 10;
 
 // ADD EVENT LISTENERS
 function eventListeners() {
   playNowButton.addEventListener("click", playNow);
-  submitButton.addEventListener("click", checkAnswer);
 }
 
 function playNow() {
   correctScore = 0;
   questionsAsked = 0;
   data = [];
-  document.getElementById("quiz").classList.remove("hidden");
-  document.getElementById("intro").classList.add("hidden");
+  quiz.classList.remove("hidden");
+  intro.classList.add("hidden");
   quiz.scrollIntoView({ behavior: "smooth" });
 
   const selectedLevel = document.getElementById("level-select").value;
@@ -61,11 +61,23 @@ function getRandomQuestions(count = MAX_QUESTIONS) {
 }
 
 function populateOptions() {
+  let randomIndex;
+  let selectedAnswer;
+  submitButton.style.display = "inline-block";
+  nextQuestion.style.display = "none";
+
+  incrementQuestion();
+  console.log(questionsAsked);
+
   if (randomQuestions.length > 0) {
-    const randomIndex = Math.floor(Math.random() * randomQuestions.length);
+    randomIndex = Math.floor(Math.random() * randomQuestions.length);
+    console.log(randomIndex);
     const selectedArray = randomQuestions[randomIndex];
-    const selectedAnswer = selectedArray[Math.floor(Math.random() * selectedArray.length)];
+    console.log(selectedArray);
+    selectedAnswer = selectedArray[Math.floor(Math.random() * selectedArray.length)];
+    console.log(selectedAnswer);
     quizImage.src = selectedAnswer.image;
+    // add alt text to image
 
     const otherOptions = selectedArray
       .filter((option) => option !== selectedAnswer)
@@ -89,7 +101,25 @@ function populateOptions() {
     }
   });
 
+  // Remove the question from the array
+  randomQuestions.splice(randomIndex, 1);
+
   selectOption();
+
+  submitButton.addEventListener("click", checkAnswer);
+}
+
+
+function showNextQuestion() {
+
+  submitButton.style.display = "inline-block";
+  nextQuestion.style.display = "none";
+  
+  if (questionsAsked === MAX_QUESTIONS) {
+    showResults();
+  } else {
+    populateOptions(); 
+  }
 }
 
 function selectOption() {
@@ -101,29 +131,36 @@ function selectOption() {
   });
 }
 
-function checkAnswer() {
+function checkAnswer(event) {
+  event.preventDefault(); // Prevent form submission
+
+  submitButton.style.display = "none";
+  nextQuestion.style.display = "inline-block";  
+
   const correctOption = document.querySelector(".correct");
   const userSubmission = document.querySelector(".selected");
+  const notificationArea = document.getElementById("notification");
 
   if (userSubmission === correctOption) {
-    feedbackMessage.innerHTML = "Correct!";
-    incrementScore();
+    score++;
+    const correctNotification = document.createElement("p");
+    correctNotification.textContent = "Correct! ✅";
+    notificationArea.appendChild(correctNotification);
   } else {
-    feedbackMessage.innerHTML = "Incorrect!";
+    const wrongNotification = document.createElement("p");
+    wrongNotification.textContent = "Incorrect! ❌";
+    notificationArea.appendChild(wrongNotification);
   }
 
-  nextQuestion.eventListeners("click", showNextQuestion);
-
-  incrementQuestion();
-}
-
-function incrementScore() {
-  correctScore++;
-  // Update score display if needed
+  nextQuestion.addEventListener("click", function() {
+    notificationArea.innerHTML = "";
+    showNextQuestion();
+  });
 }
 
 function incrementQuestion() {
   questionsAsked++;
+  questionNumber.innerHTML = `Question ${questionsAsked} of ${MAX_QUESTIONS}:`;
   // Update question count display if needed
 }
 
