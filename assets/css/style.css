@@ -168,6 +168,19 @@ header {
   box-shadow: 4px 4px 0 0 var(--highlight-color) !important;
 }
 
+.correct {
+}
+
+.incorrect {
+  background-color: #d32f2f;
+  color: var(--secondary-color);
+}
+
+.correct-answer {
+  background-color: #2d7930;
+  color: var(--secondary-color);
+}
+
 /* Footer */
 
 footer {
