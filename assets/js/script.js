@@ -39,8 +39,8 @@ function playNow() {
 
   const selectedLevel = document.getElementById("level-select").value;
 
-    // Update question count display if needed
-    questionNumber.innerHTML = `Question ${questionsAsked} of ${MAX_QUESTIONS}:`;
+  // Update question count display if needed
+  questionNumber.innerHTML = `Question ${questionsAsked} of ${MAX_QUESTIONS}:`;
 
   fetch(`./assets/json/${selectedLevel}.json`)
     .then((response) => response.json())
@@ -51,44 +51,39 @@ function playNow() {
     .catch((error) => console.error("Error fetching data:", error));
 }
 
-
 //  Need to add a function to get random questions
-function getRandomQuestions(count = 10) {
-
-    while (randomQuestions.length < count) {
-      const randomQuestions = data[Math.floor(Math.random() * data.length)];
-      randomQuestions.push(randomQuestions);
-      }
-    console.log(randomQuestions);
-    populateOptions();
-    }
-
+function getRandomQuestions(count = MAX_QUESTIONS) {
+  for (let i = 0; i < 10; i++) {
+    randomQuestions.push(data.sort(() => 0.5 - Math.random()).slice(0, count));
+  }
+  console.log(randomQuestions);
+  populateOptions();
+}
 
 function populateOptions() {
-    console.log(data);
-  if (data.length > 0) {
-    const randomIndex = Math.floor(Math.random() * data.length);
-    const selectedAnswer = data[randomIndex];
+  if (randomQuestions.length > 0) {
+    const randomIndex = Math.floor(Math.random() * randomQuestions.length);
+    const selectedArray = randomQuestions[randomIndex];
+    const selectedAnswer = selectedArray[Math.floor(Math.random() * selectedArray.length)];
     quizImage.src = selectedAnswer.image;
 
-    const otherOptions = data
-      .filter((_, index) => index !== randomIndex)
+    const otherOptions = selectedArray
+      .filter((option) => option !== selectedAnswer)
       .sort(() => 0.5 - Math.random())
       .slice(0, 3);
-    const options = [selectedAnswer, ...otherOptions].sort(
-      () => 0.5 - Math.random()
-    );
-
-    populateOptions(options, selectedAnswer);
-  }// Clear previous options
+    options = [selectedAnswer, ...otherOptions].sort(() => 0.5 - Math.random());
+  } 
+  
+  // Clear previous options
   optionsElement.forEach((element) => {
     element.innerHTML = "";
     element.classList.remove("correct");
   });
 
   // Populate options
-   options.forEach((option, index) => {
+  options.forEach((option, index) => {
     optionsElement[index].innerHTML = option.name;
+    console.log(option.name);
     if (option === selectedAnswer) {
       optionsElement[index].classList.add("correct");
     }
@@ -135,5 +130,7 @@ function incrementQuestion() {
 function showResults() {
   quiz.classList.add("hidden");
   document.getElementById("results").classList.remove("hidden");
-  document.getElementById("score").innerHTML = `You scored ${correctScore} out of ${MAX_QUESTIONS}`;
+  document.getElementById(
+    "score"
+  ).innerHTML = `You scored ${correctScore} out of ${MAX_QUESTIONS}`;
 }
