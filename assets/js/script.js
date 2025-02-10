@@ -19,6 +19,7 @@ let data = [];
 let correctOption = "";
 let selectedAnswer = "";
 let options = [];
+let randomQuestions = [];
 
 const MAX_QUESTIONS = 10;
 
@@ -49,9 +50,22 @@ function playNow() {
     })
     .catch((error) => console.error("Error fetching data:", error));
 }
+
+
 //  Need to add a function to get random questions
 function getRandomQuestions(count = 10) {
-  console.log(data);
+
+    while (randomQuestions.length < count) {
+      const randomQuestions = data[Math.floor(Math.random() * data.length)];
+      randomQuestions.push(randomQuestions);
+      }
+    console.log(randomQuestions);
+    populateOptions();
+    }
+
+
+function populateOptions() {
+    console.log(data);
   if (data.length > 0) {
     const randomIndex = Math.floor(Math.random() * data.length);
     const selectedAnswer = data[randomIndex];
@@ -66,11 +80,7 @@ function getRandomQuestions(count = 10) {
     );
 
     populateOptions(options, selectedAnswer);
-  }
-}
-
-function populateOptions(options, selectedAnswer) {
-  // Clear previous options
+  }// Clear previous options
   optionsElement.forEach((element) => {
     element.innerHTML = "";
     element.classList.remove("correct");
