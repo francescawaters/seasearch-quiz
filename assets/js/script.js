@@ -5,22 +5,22 @@ document.addEventListener("DOMContentLoaded", function () {
 // Global Variables
 const playNowButton = document.getElementById("play-now"); // play now button
 const quiz = document.getElementById("quiz"); // quiz container
-let questionNumber = document.getElementById("question-number"); // question number
+
 const intro = document.getElementById("intro"); // intro section
 const quizImage = document.getElementById("quiz-image"); // quiz image
 const optionsElement = document.querySelectorAll(".quiz-options"); // quiz options
 const submitButton = document.getElementById("submit-button"); // submit button
-let feedbackMessage = document.getElementById("feedback-message"); // feedback message
 const retryQuiz = document.getElementById("retry-quiz"); // play again button
 const nextQuestion = document.getElementById("next-question"); // next question button
-
+let questionNumber = document.getElementById("question-number"); // question number
 let correctScore = 0;
 let questionsAsked = 0;
 let data = [];
 let correctOption = "";
 let selectedAnswer = "";
 let options = [];
-const randomQuestions = [];
+let randomQuestions = [];
+let selectedArray = [];
 
 const MAX_QUESTIONS = 10;
 
@@ -33,13 +33,13 @@ function playNow() {
   correctScore = 0;
   questionsAsked = 0;
   data = [];
-  quiz.classList.remove("hidden");
-  intro.classList.add("hidden");
+  quiz.classList.remove("hidden"); //change to display none
+  intro.classList.add("hidden"); //change to display none
   quiz.scrollIntoView({ behavior: "smooth" });
 
   const selectedLevel = document.getElementById("level-select").value;
 
-  // Update question count display if needed
+  // Update question count display
   questionNumber.innerHTML = `Question ${questionsAsked} of ${MAX_QUESTIONS}:`;
 
   fetch(`./assets/json/${selectedLevel}.json`)
@@ -102,7 +102,7 @@ function populateOptions() {
   });
 
   // Remove the question from the array
-  randomQuestions.splice(randomIndex, 1);
+  selectedArray.splice(randomIndex, 1);
 
   selectOption();
 
@@ -114,6 +114,7 @@ function showNextQuestion() {
 
   submitButton.style.display = "inline-block";
   nextQuestion.style.display = "none";
+  optionsElement.forEach((opt) => opt.classList.remove("selected"));
   
   if (questionsAsked === MAX_QUESTIONS) {
     showResults();
@@ -141,22 +142,23 @@ function checkAnswer(event) {
   const userSubmission = document.querySelector(".selected");
   const notificationArea = document.getElementById("notification");
 
-  if (userSubmission === correctOption) {
-    score++;
-    const correctNotification = document.createElement("p");
-    correctNotification.textContent = "Correct! ✅";
-    notificationArea.appendChild(correctNotification);
-  } else {
-    const wrongNotification = document.createElement("p");
-    wrongNotification.textContent = "Incorrect! ❌";
-    notificationArea.appendChild(wrongNotification);
-  }
+  notificationArea.innerHTML = ""; // Clear previous notifications
 
-  nextQuestion.addEventListener("click", function() {
-    notificationArea.innerHTML = "";
-    showNextQuestion();
-  });
+
+  const notification = document.createElement("p");
+  if (userSubmission === correctOption) {
+    correctScore++;
+    notification.textContent = "Correct! ✅";
+  } else {
+    notification.textContent = "Incorrect! ❌";
+  }
+  notificationArea.appendChild(notification);
 }
+
+nextQuestion.addEventListener("click", function() {
+  document.getElementById("notification").innerHTML = "";
+  showNextQuestion();
+});
 
 function incrementQuestion() {
   questionsAsked++;
@@ -170,4 +172,9 @@ function showResults() {
   document.getElementById(
     "score"
   ).innerHTML = `You scored ${correctScore} out of ${MAX_QUESTIONS}`;
+
+  retryQuiz.addEventListener("click", function () {
+    document.getElementById("results").classList.add("hidden");
+    intro.classList.remove("hidden");
+  });
 }
