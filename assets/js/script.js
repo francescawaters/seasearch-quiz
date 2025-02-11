@@ -1,43 +1,43 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   // Global Variables
-  const playNowButton = document.getElementById("play-now"); // play now button
-  const quiz = document.getElementById("quiz"); // quiz container
-
   const intro = document.getElementById("intro"); // intro section
-  const quizImage = document.getElementById("quiz-image"); // quiz image
-  const optionsElement = document.querySelectorAll(".quiz-options"); // quiz options
+  const quiz = document.getElementById("quiz"); // quiz container
+  const results = document.getElementById("results"); // results section
+
+  const playNowButton = document.getElementById("play-now"); // play now button
   const submitButton = document.getElementById("submit-button"); // submit button
   const retryQuiz = document.getElementById("retry-quiz"); // play again button
   const nextQuestion = document.getElementById("next-question"); // next question button
-  let questionNumber = document.getElementById("question-number"); // question number
+
+  const quizImage = document.getElementById("quiz-image"); // quiz image
+  
+  const optionsElement = document.querySelectorAll(".quiz-options"); // quiz options
+
+  let questionProgress = document.getElementById("question-progress"); // question number display
   let correctScore = 0;
   let questionsAsked = 0;
+  const MAX_QUESTIONS = 10;
+
   let data = [];
-  let correctOption = "";
   let selectedAnswer = "";
   let options = [];
   let randomQuestions = [];
   let selectedArray = [];
 
-  const MAX_QUESTIONS = 10;
 
   // ADD EVENT LISTENER TO PLAY NOW BUTTON
   playNowButton.addEventListener("click", playNow);
 
-
   function playNow() {
-    correctScore = 0;
-    questionsAsked = 0;
-    data = [];
-    quiz.classList.remove("hidden"); //change to display none
-    intro.classList.add("hidden"); //change to display none
+    quiz.style.display = "block";
+    intro.style.display = "none";
     quiz.scrollIntoView({ behavior: "smooth" });
 
     const selectedLevel = document.getElementById("level-select").value;
 
     // Update question count display
-    questionNumber.innerHTML = `Question ${questionsAsked} of ${MAX_QUESTIONS}:`;
+    questionProgress.innerHTML = `Question ${questionsAsked} of ${MAX_QUESTIONS}:`;
 
     fetch(`./assets/json/${selectedLevel}.json`)
       .then((response) => response.json())
@@ -61,17 +61,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function populateOptions() {
     let randomIndex;
-    let selectedAnswer;
     submitButton.style.display = "inline-block";
     nextQuestion.style.display = "none";
 
-    incrementQuestion();
-    console.log(questionsAsked);
+    incrementQuestion(); // Increment question count
 
     if (randomQuestions.length > 0) {
       randomIndex = Math.floor(Math.random() * randomQuestions.length);
       console.log(randomIndex);
-      const selectedArray = randomQuestions[randomIndex];
+      selectedArray = randomQuestions[randomIndex];
       console.log(selectedArray);
       selectedAnswer =
         selectedArray[Math.floor(Math.random() * selectedArray.length)];
@@ -165,20 +163,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function incrementQuestion() {
     questionsAsked++;
-    questionNumber.innerHTML = `Question ${questionsAsked} of ${MAX_QUESTIONS}:`;
+    questionProgress.innerHTML = `Question ${questionsAsked} of ${MAX_QUESTIONS}:`;
     // Update question count display if needed
   }
 
   function showResults() {
-    quiz.classList.add("hidden");
-    document.getElementById("results").classList.remove("hidden");
+    quiz.style.display = "none";
+    results.style.display = "block";
     document.getElementById(
       "score"
     ).innerHTML = `You scored ${correctScore} out of ${MAX_QUESTIONS}`;
 
     retryQuiz.addEventListener("click", function () {
-      document.getElementById("results").classList.add("hidden");
-      intro.classList.remove("hidden");
+      results.style.display = "none";
+      intro.style.display = "block";
     });
   }
 }); // End of DOMContentLoaded
