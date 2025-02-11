@@ -66,6 +66,7 @@ function populateOptions() {
   submitButton.style.display = "inline-block";
   nextQuestion.style.display = "none";
 
+
   incrementQuestion();
   console.log(questionsAsked);
 
@@ -114,6 +115,7 @@ function showNextQuestion() {
 
   submitButton.style.display = "inline-block";
   nextQuestion.style.display = "none";
+  optionsElement.forEach((opt) => opt.classList.remove("disabled"));
   optionsElement.forEach((opt) => opt.classList.remove("selected"));
   
   if (questionsAsked === MAX_QUESTIONS) {
@@ -126,8 +128,10 @@ function showNextQuestion() {
 function selectOption() {
   optionsElement.forEach((option) => {
     option.addEventListener("click", function () {
-      optionsElement.forEach((opt) => opt.classList.remove("selected"));
-      option.classList.add("selected");
+      if (nextQuestion.style.display === "none") {
+        optionsElement.forEach((opt) => opt.classList.remove("selected"));
+        option.classList.add("selected");
+      }
     });
   });
 }
@@ -136,7 +140,8 @@ function checkAnswer(event) {
   event.preventDefault(); // Prevent form submission
 
   submitButton.style.display = "none";
-  nextQuestion.style.display = "inline-block";  
+  nextQuestion.style.display = "inline-block";
+  optionsElement.forEach((opt) => opt.classList.add("disabled"));
 
   const correctOption = document.querySelector(".correct");
   const userSubmission = document.querySelector(".selected");
