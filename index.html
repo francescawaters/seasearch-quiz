@@ -51,7 +51,7 @@
               <div class="col-md-10 col-lg-6">
                 <div class="card">
                   <div class="text-center">
-                    <h2>Welcome to the Marine Species Identification Quiz</h2>
+                    <h1>Welcome to the Marine Species Identification Quiz</h1>
                   </div>
                   <div class="card-body text-center">
                     <p>Test your knowledge of marine life by identifying different species. Select your level and click "Play Now" to start the quiz.</p>
@@ -82,9 +82,12 @@
               <div class="col-md-10 col-lg-8">
                 <div class="card">
                   <div class="hidden" id="quiz-header">
-                    <h2>Marine Species Identification Quiz</h2>
+                    <h1>Marine Species Identification Quiz</h1>
                   </div>
-                  <div class="card-body">
+                  <div class="col-12 col-md-8 col-lg-6 mx-auto text-center">
+                    <p id="question-progress" class="quiz-p"></p>
+                  </div>
+                    <div class="card-body">
                     <div class="col-12 col-md-6 col-lg-4 mx-auto">
                       <img
                         id="quiz-image"
@@ -92,13 +95,10 @@
                         alt=""
                         class="img-fluid"
                       />
-                      <div id="quiz-question" class="mb-3">
-                      <p id="question-progress"></p>
-                      <p>What species is this?</p>
-                      </div>
                     </div>
                     <form id="quiz-form">
                       <div class="container-fluid col-xs-12 col-md-8 col-lg-6 ">
+                        <h2 class="quiz-p">What species is this?</h2>
                         <ul class="list-group">
                           <li class="quiz-options" data-value="option1"></li>
                           <li class="quiz-options" data-value="option2"></li>
@@ -130,10 +130,10 @@
               <div class="col-md-10 col-lg-6">
                 <div class="card">
                   <div class="text-center">
-                    <h2>Quiz Results</h2>
+                    <h1>Quiz Results</h1>
                   </div>
                   <div class="card-body text-center">
-                    <p id="results-message">Congratulations! You scored <span id="score">7/10</span>.</p>
+                    <p id="results-message">Congratulations! <span id="score"></span>.</p>
                     <button id="retry-quiz" class="btn btn-outline-custom">
                       Play again!
                     </button>
@@ -153,7 +153,7 @@
             aria-labelledby="contactOffcanvasLabel"
           >
             <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="contactOffcanvasLabel">Contact Us</h5>
+              <h3 class="offcanvas-title" id="contactOffcanvasLabel">Contact Us</h3>
               <button
                 type="button"
                 class="btn-close"
@@ -161,10 +161,15 @@
                 aria-label="Close"
               ></button>
             </div>
+
             <div class="offcanvas-body">
-              <form id="contactForm">
+              <form id="contactForm" action="" method="post">
                 <div class="mb-3">
-                  <label for="contact-name" class="form-label">Name</label>
+                <div>
+                <p>We welcome your questions and feedback on the quiz.
+                   Please use the form below to get in touch with us.</p>
+                </div>
+                  <label for="contact-name" class="form-label">Name:</label>
                   <input
                     type="text"
                     class="form-control"
@@ -174,7 +179,7 @@
                 </div>
                 <div class="mb-3">
                   <label for="contact-email" class="form-label"
-                    >Email address</label
+                    >Email address:</label
                   >
                   <input
                     type="email"
@@ -184,7 +189,7 @@
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="contact-message" class="form-label">Message</label>
+                  <label for="contact-message" class="form-label">Message:</label>
                   <textarea
                     class="form-control"
                     id="contact-message"
@@ -243,7 +248,7 @@
             </div>
           </div>
           <div>
-            <p>Seasearch &copy; 2021</p>
+            <p>Seasearch &copy; 2025</p>
           </div>
         </div>
       </div>

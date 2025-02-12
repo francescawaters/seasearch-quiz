@@ -38,7 +38,16 @@ h4 {
   /* text-shadow: 4px 4px 4px #aaa; */
 }
 
+h2 {
+  font-size: 1.5rem;
+}
+
 p {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+label {
   font-size: 1.2rem;
   color: var(--primary-color);
 }
@@ -104,6 +113,11 @@ header {
   border-radius: 10px;
 }
 
+#logo:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
 /* Main */
 
 .card {
@@ -135,18 +149,20 @@ header {
 
 #quiz-image {
   border-radius: 10px;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 5px 1px rgba(3, 76, 140, 0.5);
 }
 
-#quiz-question {
-  text-align: left;
+.quiz-p {
+  margin: 0;
+  text-align: start;
 }
 
-#number {
-  font-size: 1.5rem;
-  font-family: var(--secondary-font);
-  color: var(--primary-color);
+#question-progress {
+  text-align: start;
+  font-weight: bold;
 }
+
 
 .quiz-options {
   border: #034c8c solid 1px;
@@ -174,7 +190,7 @@ header {
 }
 
 .correct {
-  
+
 }
 
 .incorrect {
@@ -210,8 +226,7 @@ footer .social-links i {
 }
 
 footer .social-links i:hover {
-  color: #fff
-  ;
+  color: var(--primary-color);
 }
 
 /* Media Queries */

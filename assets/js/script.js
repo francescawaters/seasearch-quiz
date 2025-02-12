@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let randomQuestions = [];
   let selectedArray = [];
 
-
   // ADD EVENT LISTENER TO PLAY NOW BUTTON
   playNowButton.addEventListener("click", playNow);
 
@@ -34,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     intro.style.display = "none";
     quiz.scrollIntoView({ behavior: "smooth" });
 
+    questionsAsked = 0;
     const selectedLevel = document.getElementById("level-select").value;
 
     // Update question count display
