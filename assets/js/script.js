@@ -25,8 +25,18 @@ document.addEventListener("DOMContentLoaded", function () {
   let randomQuestions = [];
   let selectedArray = [];
 
-  // ADD EVENT LISTENER TO PLAY NOW BUTTON
+  // EVENT LISTENERS
   playNowButton.addEventListener("click", playNow);
+
+  nextQuestion.addEventListener("click", function () {
+    showNextQuestion();
+  });
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Enter" && nextQuestion.style.display === "inline-block") {
+      showNextQuestion();
+    }
+  });
+
 
   function playNow() {
     quiz.style.display = "block";
@@ -75,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
         selectedArray[Math.floor(Math.random() * selectedArray.length)];
       console.log(selectedAnswer);
       quizImage.src = selectedAnswer.image;
-      // add alt text to image
+      quizImage.alt = selectedAnswer.name;
 
       const otherOptions = selectedArray
         .filter((option) => option !== selectedAnswer)
@@ -153,10 +163,6 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelector(".correct").classList.add("correct-answer");
     }
   }
-
-  nextQuestion.addEventListener("click", function () {
-    showNextQuestion();
-  });
 
   function incrementQuestion() {
     questionsAsked++;

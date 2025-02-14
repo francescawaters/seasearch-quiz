@@ -116,6 +116,12 @@
                       <button id="next-question" class="btn btn-outline-custom">
                         Next Question</button>
                     </div>
+                    <!-- Resources Button -->
+                    <div class="text-end">
+                      <button type="button" id="btn-resources" class="btn btn-resources" data-bs-toggle="modal" data-bs-target="#resourcesModal">
+                        <i class="fa-solid fa-circle-question"></i>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -137,6 +143,7 @@
                       src="assets/images/results-image.jpg"
                       alt=""
                       class="img-fluid">
+                    <br>
                     <button id="retry-quiz" class="btn btn-outline-custom mt-3">
                       Play again!
                     </button>
@@ -207,6 +214,37 @@
           </div>
       </section>
     </main>
+    <!-- Resources Modal -->
+    <div class="modal fade" id="resourcesModal" tabindex="-1" aria-labelledby="resourcesModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="resourcesModalLabel">Helpful Resources</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <a href="https://www.marlin.ac.uk/" target="_blank" rel="noopener">Marine Life Information Network</a>
+              </li>
+              <li class="list-group-item">
+                <a href="https://www.habitas.org.uk/marinelife/" target="_blank" rel="noopener">Encyclopedia of Marine Life of Britain and Ireland - Habitas</a>
+              </li>
+              <li class="list-group-item">
+                <a href="https://shop.mcsuk.org/products/great-british-marine-animals" target="_blank" rel="noopener">Great British Marine Animals</a>
+              </li>
+              <li class="list-group-item">
+                <a href="https://shop.mcsuk.org/collections/field-guides/products/the-divers-guide-to-marine-life-of-britain-and-ireland-second-edition" target="_blank" rel="noopener">The Diver's Guide to Marine Life of Britain and Ireland - Second Edition</a>
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <!-- Footer / contact section -->
     <!-- mt-auto added to push footer to the bottom of the page -->

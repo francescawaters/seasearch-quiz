@@ -1,52 +1,87 @@
 [
     {
         "name": "Black Tar Sponge",
-        "phylum": "Porifera",
-        "image": "assets/images/black-tar.jpg"
+        "image": "assets/images/black-tar.jpg",
+        "info": ""
     },
     {
         "name": "Elephant Hide Sponge",
-        "phylum": "Porifera",
-        "image": "assets/images/elephant-hide-sponge.jpg"
+        "image": "assets/images/elephant-hide-sponge.jpg",
+        "info": ""
     },
     {
         "name": "Breadcrumb Sponge",
-        "phylum": "Porifera",
-        "image": "assets/images/breadcrumb-sponge.jpg"
+        "image": "assets/images/breadcrumb-sponge.jpg",
+        "info": ""
     },
     {
         "name": "Crater Sponge",
-        "phylum": "Porifera",
-        "image": "assets/images/crater-sponge.jpg"
+        "image": "assets/images/crater-sponge.jpg",
+        "info": ""
     },
     {
         "name": "Boring Sponge",
-        "phylum": "Porifera",
-        "image": "assets/images/boring-sponge.jpg"
+        "image": "assets/images/boring-sponge.jpg",
+        "info": ""
     },
     {
         "name": "Sea Orange",
-        "phylum": "Porifera",
-        "image": "assets/images/sea-orange.jpg"
+        "image": "assets/images/sea-orange.jpg",
+        "info": ""
     },
     {
         "name": "Yellow Hedgehog Sponge",
-        "phylum": "Porifera",
-        "image": "assets/images/yellow-hedgehog-sponge.jpg"
+        "image": "assets/images/yellow-hedgehog-sponge.jpg",
+        "info": ""
     },
     {
         "name": "Golf Ball Sponge",
-        "phylum": "Porifera",
-        "image": "assets/images/golf-ball-sponge.jpg"
+        "image": "assets/images/golf-ball-sponge.jpg",
+        "info": ""
     },
     {
         "name": "Goosebump Sponge",
-        "phylum": "Porifera",
-        "image": "assets/images/goosebump-sponge.jpg"
+        "image": "assets/images/goosebump-sponge.jpg",
+        "info": ""
     },
     {
         "name": "Volcano Sponge",
-        "phylum": "Porifera",
-        "image": "assets/images/volcano-sponge.jpg"
+        "image": "assets/images/volcano-sponge.jpg",
+        "info": ""
+    },
+    {
+        "name": "Chocolate Finger Sponge",
+        "image": "assets/images/chocolate-finger-sponge.jpg",
+        "info": ""
+    },
+    {
+        "name": "Mermaids Glove Sponge",
+        "image": "assets/images/mermaids-glove-sponge.jpg",
+        "info": ""
+    },
+    {
+        "name": "White Lace Sponge",
+        "image": "assets/images/white-lace-sponge.jpg",
+        "info": ""
+    },
+    {
+        "name": "Yellow Staghorn Sponge",
+        "image": "assets/images/yellow-staghorn-sponge.jpg",
+        "info": ""
+    },
+    {
+        "name": "Shredded Carrot Sponge",
+        "image": "assets/images/shredded-carrot-sponge.jpg",
+        "info": ""
+    },
+    {
+        "name": "Prawn Cracker Sponge",
+        "image": "assets/images/prawn-cracker-sponge.jpg",
+        "info": ""
+    },
+    {
+        "name": "Chimney Sponge",
+        "image": "assets/images/chimney-sponge.jpg",
+        "info": ""
     }
 ]

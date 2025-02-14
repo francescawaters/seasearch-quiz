@@ -22,7 +22,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   font-family: var(--primary-font);
-  background: url(../images/bg.jpg) no-repeat center center/cover;
+  background: url(../images/bg.jpg) no-repeat center center/cover fixed;
   background-color: var(--secondary-color);
   color: var(--primary-color);
   margin: 0;
@@ -73,6 +73,16 @@ label {
     padding: 0.5rem 1rem;
     border-radius: 1rem;
     cursor: pointer;
+}
+
+#btn-resources {
+    color: var(--primary-color);
+    font-size: 160%;
+}
+
+.btn-resources:hover {
+    color: var(--highlight-color-light);
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .btn-primary:hover {
@@ -179,27 +189,44 @@ img {
 .quiz-options:hover {
   background-color: var(--highlight-color-light);
   color: var(--secondary-color);
-  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  border: none;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+  transform: scale(1.05);
 }
 
 .selected {
   background-color: var(--highlight-color-light);
   color: var(--secondary-color);
-  box-shadow: 4px 4px 0 0 var(--highlight-color) !important;
+  box-shadow: 4px 4px 0 0 var(--highlight-color);
 }
 
 .correct {
-
+ 
 }
 
 .incorrect {
-  background-color: #d32f2f;
+  background-color: #AD1010;
   color: var(--secondary-color);
+  box-shadow: 4px 4px 0 0 #fd0000;
+    border: #fff solid 2px;
 }
 
 .correct-answer {
-  background-color: #2d7930;
+  background-color: #246027;
   color: var(--secondary-color);
+  box-shadow: 4px 4px 0 0 #00ff08;
+  border: #fff solid 2px;
+}
+
+/* Modal */
+
+.modal a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.modal a:hover {
+  color: var(--highlight-color);
 }
 
 /* Footer */
@@ -237,8 +264,16 @@ footer .social-links i:hover {
   }
 }
 
+/* For laptops and larger */
 @media screen and (min-width: 1440px) {
   #intro {
     margin: 15vh 0;
   }
+  #quiz {
+    margin: 5vh 0;
+  }
+  #results {
+    margin: 5vh 0;
+  }
+
 }
