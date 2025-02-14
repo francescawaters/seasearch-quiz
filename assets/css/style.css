@@ -216,7 +216,7 @@ footer a {
 }
 
 footer .social-links i {
-  color: var(--highlight-color);
+  color: var(--primary-color);
   font-size: 1.9rem;
   margin: 0 10px;
   -webkit-transition: color 0.3s ease-in-out;
@@ -225,7 +225,7 @@ footer .social-links i {
 }
 
 footer .social-links i:hover {
-  color: var(--primary-color);
+  color: var(--highlight-color);
 }
 
 /* Media Queries */
