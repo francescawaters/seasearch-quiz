@@ -114,6 +114,8 @@ document.addEventListener("DOMContentLoaded", function () {
     nextQuestion.style.display = "none";
     optionsElement.forEach((opt) => opt.classList.remove("disabled"));
     optionsElement.forEach((opt) => opt.classList.remove("selected"));
+    optionsElement.forEach((opt) => opt.classList.remove("correct-answer"));
+    optionsElement.forEach((opt) => opt.classList.remove("incorrect"));
 
     if (questionsAsked === MAX_QUESTIONS) {
       showResults();
@@ -142,22 +144,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const correctOption = document.querySelector(".correct");
     const userSubmission = document.querySelector(".selected");
-    const notificationArea = document.getElementById("notification");
 
-    notificationArea.innerHTML = ""; // Clear previous notifications
-
-    const notification = document.createElement("p");
     if (userSubmission === correctOption) {
       correctScore++;
-      notification.textContent = "Correct! ✅";
-    } else {
-      notification.textContent = "Incorrect! ❌";
+      document.querySelector(".correct").classList.add("correct-answer");
+    } else if (userSubmission !== correctOption) {
+      document.querySelector(".selected").classList.add("incorrect");
+      document.querySelector(".correct").classList.add("correct-answer");
     }
-    notificationArea.appendChild(notification);
   }
 
   nextQuestion.addEventListener("click", function () {
-    document.getElementById("notification").innerHTML = "";
     showNextQuestion();
   });
 
