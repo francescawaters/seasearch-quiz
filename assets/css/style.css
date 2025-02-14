@@ -120,6 +120,11 @@ header {
 
 /* Main */
 
+img {
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 5px 1px rgba(3, 76, 140, 0.5);
+}
 .card {
   text-align: center;
   background-color: var(--secondary-color);
@@ -145,12 +150,6 @@ header {
   border-radius: 10px;
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
-}
-
-#quiz-image {
-  border-radius: 10px;
-  margin-bottom: 1rem;
-  box-shadow: 0 0 5px 1px rgba(3, 76, 140, 0.5);
 }
 
 .quiz-p {
