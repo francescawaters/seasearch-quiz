@@ -158,8 +158,10 @@ document.addEventListener("DOMContentLoaded", function () {
     if (userSubmission === correctOption) {
       correctScore++;
       document.querySelector(".correct").classList.add("correct-answer");
+      document.querySelector(".correct").innerHTML += "  ✅";
     } else if (userSubmission !== correctOption) {
       document.querySelector(".selected").classList.add("incorrect");
+      document.querySelector(".selected").innerHTML += "  ❌";
       document.querySelector(".correct").classList.add("correct-answer");
     }
   }

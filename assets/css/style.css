@@ -205,17 +205,19 @@ img {
 }
 
 .incorrect {
-  background-color: #AD1010;
-  color: var(--secondary-color);
-  box-shadow: 4px 4px 0 0 #fd0000;
-    border: #fff solid 2px;
+  color: #AD1010;
+  background-color: var(--secondary-color);
+  box-shadow: 4px 4px 0 0 #ff4b4b;
+  border: #AD1010 solid 2px;
+  font-weight: bold;
 }
 
 .correct-answer {
-  background-color: #246027;
-  color: var(--secondary-color);
-  box-shadow: 4px 4px 0 0 #00ff08;
-  border: #fff solid 2px;
+  color: #246027;
+  background-color: var(--secondary-color);
+  box-shadow: 4px 4px 0 0 #81ff85;
+  border: #246027 solid 2px;
+  font-weight: bold;
 }
 
 /* Modal */
