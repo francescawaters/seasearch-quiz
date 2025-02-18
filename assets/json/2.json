@@ -1,52 +1,78 @@
 [
   {
-    "name": "Cnidaria Name 1",
-    "phylum": "Cnidaria",
-    "image": "assets/images/cnidaria1.jpg"
+    "name": "Beadlet Anemone",
+    "image": "assets/images/beadlet-anemone.jpg"
   },
   {
-    "name": "Cnidaria Name 2",
-    "phylum": "Cnidaria",
-    "image": "assets/images/cnidaria2.jpg"
+    "name": "Burrowing Anemone",
+    "image": "assets/images/burrowing-anemone.jpg"
   },
   {
-    "name": "Cnidaria Name 3",
-    "phylum": "Cnidaria",
-    "image": "assets/images/cnidaria3.jpg"
+    "name": "Dahlia Anemone",
+    "image": "assets/images/dahlia-anemone.jpg"
   },
   {
-    "name": "Cnidaria Name 4",
-    "phylum": "Cnidaria",
-    "image": "assets/images/cnidaria4.jpg"
+    "name": "Burrowing Anemone",
+    "image": "assets/images/burrowing-anemone2.jpg"
   },
   {
-    "name": "Cnidaria Name 5",
-    "phylum": "Cnidaria",
-    "image": "assets/images/cnidaria5.jpg"
+    "name": "Compasss Jellyfish",
+    "image": "assets/images/compass-jellyfish.jpg"
   },
   {
-    "name": "Cnidaria Name 6",
-    "phylum": "Cnidaria",
-    "image": "assets/images/cnidaria6.jpg"
+    "name": "Daisy Anemone",
+    "image": "assets/images/daisy-anemone.jpg"
   },
   {
-    "name": "Cnidaria Name 7",
-    "phylum": "Cnidaria",
-    "image": "assets/images/cnidaria7.jpg"
+    "name": "Devonshire Cup Coral",
+    "image": "assets/images/devonshire-cup-coral.jpg"
   },
   {
-    "name": "Cnidaria Name 8",
-    "phylum": "Cnidaria",
-    "image": "assets/images/cnidaria8.jpg"
+    "name": "Elegant Anemone",
+    "image": "assets/images/elegant-anemone.jpg"
   },
   {
-    "name": "Cnidaria Name 9",
-    "phylum": "Cnidaria",
-    "image": "assets/images/cnidaria9.jpg"
+    "name": "Horseman Anemone",
+    "image": "assets/images/horseman-anemone.jpg"
   },
   {
-    "name": "Cnidaria Name 10",
-    "phylum": "Cnidaria",
-    "image": "assets/images/cnidaria10.jpg"
+    "name": "Jewel Anemone",
+    "image": "assets/images/jewel-anemone.jpg"
+  },
+  {
+    "name": "Orange Anemone",
+    "image": "assets/images/orange-anemone.jpg"
+  },
+  {
+    "name": "Plumose Anemone",
+    "image": "assets/images/plumose-anemone.jpg"
+  },
+  {
+    "name": "Scarlet and Gold Star Coral",
+    "image": "assets/images/scarlet-and-gold-star-coral.jpg"
+  },
+  {
+    "name": "Sealoch Anemone",
+    "image": "assets/images/sealoch-anemone.jpg"
+  },
+  {
+    "name": "Snakelocks Anemone",
+    "image": "assets/images/snakelocks-anemone.jpg"
+  },
+  {
+    "name": "Strawberry Anemone",
+    "image": "assets/images/strawberry-anemone.jpg"
+  },
+  {
+    "name": "Southern Cup Coral",
+    "image": "assets/images/southern-cup-coral.jpg"
+  },
+  {
+    "name": "White-striped Anemone",
+    "image": "assets/images/white-striped-anemone.jpg"
+  },
+  {
+    "name": "Sunset Cup Coral",
+    "image": "assets/images/sunset-cup-coral.jpg"
   }
 ]
