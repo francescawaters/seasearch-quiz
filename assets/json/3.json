@@ -1,0 +1,70 @@
+[
+    {
+        "name": "Bootlace Worm",
+        "image": "assets/images/bootlace-worm.jpg"
+    },
+    {
+        "name": "Candy Stripe Flatworm",
+        "image": "assets/images/candy-stripe-flatworm.jpg"
+    },
+    {
+        "name": "Coral worms",
+        "image": "assets/images/coral-worms.jpg"
+    },
+    {
+        "name": "Double Spiral Worm",
+        "image": "assets/images/double-spiral-worm.jpg"
+    },
+    {
+        "name": "Eyelash Worm",
+        "image": "assets/images/eyelash-worm.jpg"
+    },
+    {
+        "name": "Football Jersey Worm",
+        "image": "assets/images/football-jersey-worm.jpg"
+    },
+    {
+        "name": "Keelworms",
+        "image": "assets/images/keelworms.jpg"
+    },
+    {
+        "name": "Lugworm",
+        "image": "assets/images/lugworms.jpg"
+    },
+    {
+        "name": "Organ Pipe Worm",
+        "image": "assets/images/organ-pipe-worm.jpg"
+    },
+    {
+        "name": "Paddleworm",
+        "image": "assets/images/paddleworm.jpg"
+    },
+    {
+        "name": "Parchment Worm",
+        "image": "assets/images/parchment-worm.jpg"
+    },
+    {
+        "name": "Ragworm",
+        "image": "assets/images/ragworms.jpg"
+    },
+    {
+        "name": "Sand Mason Worm",
+        "image": "assets/images/sand-mason-worm.jpg"
+    },
+    {
+        "name": "Sea Mouse",
+        "image": "assets/images/sea-mouse.jpg"
+    },
+    {
+        "name": "Peacock Worm",
+        "image": "assets/images/peacock-worm.jpg"
+    },
+    {
+        "name": "Red Spotted Horseshoe Worm",
+        "image": "assets/images/red-spotted-horseshoe-worm.jpg"
+    },
+    {
+        "name": "Ross Worm",
+        "image": "assets/images/ross-worm.jpg"
+    }
+]
