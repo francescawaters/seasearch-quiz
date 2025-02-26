@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let selectedAnswer = "";
   let options = [];
   let randomQuestions = [];
-  let selectedArray = [];
 
   // EVENT LISTENERS
   playNowButton.addEventListener("click", playNow);
@@ -58,14 +57,9 @@ document.addEventListener("DOMContentLoaded", function () {
       .catch((error) => console.error("Error fetching data:", error));
   }
 
-  //  Need to add a function to get random questions
-  function getRandomQuestions(count = MAX_QUESTIONS) {
-    for (let i = 0; i < 10; i++) {
-      randomQuestions.push(
-        data.sort(() => 0.5 - Math.random()).slice(0, count)
-      );
-    }
-    console.log(randomQuestions);
+  function getRandomQuestions(count = 14) {
+    randomQuestions = data
+    randomQuestions = randomQuestions.sort(() => 0.5 - Math.random()).slice(0, count);
     populateOptions();
   }
 
@@ -78,16 +72,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (randomQuestions.length > 0) {
       randomIndex = Math.floor(Math.random() * randomQuestions.length);
-      console.log(randomIndex);
-      selectedArray = randomQuestions[randomIndex];
-      console.log(selectedArray);
-      selectedAnswer =
-        selectedArray[Math.floor(Math.random() * selectedArray.length)];
-      console.log(selectedAnswer);
+      selectedAnswer = randomQuestions[randomIndex];
       quizImage.src = selectedAnswer.image;
       quizImage.alt = selectedAnswer.name;
 
-      const otherOptions = selectedArray
+      const otherOptions = randomQuestions
         .filter((option) => option !== selectedAnswer)
         .sort(() => 0.5 - Math.random())
         .slice(0, 3);
@@ -105,14 +94,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // Populate options
     options.forEach((option, index) => {
       optionsElement[index].innerHTML = option.name;
-      console.log(option.name);
       if (option === selectedAnswer) {
         optionsElement[index].classList.add("correct");
       }
     });
 
-    // Remove the question from the array
-    selectedArray.splice(randomIndex, 1);
+    // Remove the selected answer from the array
+    randomQuestions.splice(randomIndex, 1);
 
     selectOption();
 
