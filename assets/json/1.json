@@ -1,87 +1,104 @@
 [
     {
         "name": "Black Tar Sponge",
-        "image": "assets/images/black-tar.jpg",
+        "backup-image": "assets/images/black-tar.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787414/black-tar_qohtmp.jpg",
         "info": ""
     },
     {
         "name": "Elephant Hide Sponge",
-        "image": "assets/images/elephant-hide-sponge.jpg",
+        "backup-image": "assets/images/elephant-hide-sponge.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787422/elephant-hide-sponge_lehczz.jpg",
         "info": ""
     },
     {
         "name": "Breadcrumb Sponge",
-        "image": "assets/images/breadcrumb-sponge.jpg",
+        "backup-image": "assets/images/breadcrumb-sponge.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787414/breadcrumb-sponge_ejgba5.jpg",
         "info": ""
     },
     {
         "name": "Crater Sponge",
-        "image": "assets/images/crater-sponge.jpg",
+        "backup-image": "assets/images/crater-sponge.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787435/crater-sponge_tn70gi.jpg",
         "info": ""
     },
     {
         "name": "Boring Sponge",
-        "image": "assets/images/boring-sponge.jpg",
+        "backup-image": "assets/images/boring-sponge.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787419/boring-sponge_dnfxue.jpg",
         "info": ""
     },
     {
         "name": "Sea Orange",
-        "image": "assets/images/sea-orange.jpg",
+        "backup-image": "assets/images/sea-orange.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787448/sea-orange_ol3ahw.jpg",
         "info": ""
     },
     {
         "name": "Yellow Hedgehog Sponge",
-        "image": "assets/images/yellow-hedgehog-sponge.jpg",
+        "backup-image": "assets/images/yellow-hedgehog-sponge.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787417/yellow-hedgehog-sponge_ppalmi.jpg",
         "info": ""
     },
     {
         "name": "Golf Ball Sponge",
-        "image": "assets/images/golf-ball-sponge.jpg",
+        "backup-image": "assets/images/golf-ball-sponge.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787421/golf-ball-sponge_qowdw1.jpg",
         "info": ""
     },
     {
         "name": "Goosebump Sponge",
-        "image": "assets/images/goosebump-sponge.jpg",
+        "backup-image": "assets/images/goosebump-sponge.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787426/goosebump-sponge_dhsoth.jpg",
         "info": ""
     },
     {
         "name": "Volcano Sponge",
-        "image": "assets/images/volcano-sponge.jpg",
+        "backup-image": "assets/images/volcano-sponge.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787449/shredded-carrot-sponge_mt7ves.jpg",
         "info": ""
     },
     {
         "name": "Chocolate Finger Sponge",
-        "image": "assets/images/chocolate-finger-sponge.jpg",
+        "backup-image": "assets/images/chocolate-finger-sponge.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787423/chocolate-finger-sponge_fbafig.jpg",
         "info": ""
     },
     {
         "name": "Mermaids Glove Sponge",
-        "image": "assets/images/mermaids-glove-sponge.jpg",
+        "backup-image": "assets/images/mermaids-glove-sponge.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787429/mermaids-glove-sponge_mj7t6e.jpg",
         "info": ""
     },
     {
         "name": "White Lace Sponge",
-        "image": "assets/images/white-lace-sponge.jpg",
+        "backup-image": "assets/images/white-lace-sponge.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787449/shredded-carrot-sponge_mt7ves.jpg",
         "info": ""
     },
     {
         "name": "Yellow Staghorn Sponge",
-        "image": "assets/images/yellow-staghorn-sponge.jpg",
+        "backup-image": "assets/images/yellow-staghorn-sponge.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787415/yellow-staghorn-sponge_mhioef.jpg",
         "info": ""
     },
     {
         "name": "Shredded Carrot Sponge",
-        "image": "assets/images/shredded-carrot-sponge.jpg",
+        "backup-image": "assets/images/shredded-carrot-sponge.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787449/shredded-carrot-sponge_mt7ves.jpg",
         "info": ""
     },
     {
         "name": "Prawn Cracker Sponge",
-        "image": "assets/images/prawn-cracker-sponge.jpg",
+        "backup-image": "assets/images/prawn-cracker-sponge.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787441/prawn-cracker-sponge_ov3siq.jpg",
         "info": ""
     },
     {
         "name": "Chimney Sponge",
-        "image": "assets/images/chimney-sponge.jpg",
+        "backup-image": "assets/images/chimney-sponge.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787413/chimney-sponge_ygl8mp.jpg",
         "info": ""
     }
 ]

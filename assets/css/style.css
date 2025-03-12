@@ -1,5 +1,5 @@
 /* Google fonts import */
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Audiowide&family=Bangers&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend+Exa:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Patua+One&family=Poiret+One&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Audiowide&family=Bangers&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend+Exa:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Patua+One&family=Poiret+One&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap");
 /* CSS Variables */
 :root {
   --primary-font: "Inter", sans-serif;
@@ -22,7 +22,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   font-family: var(--primary-font);
-  background: url(../images/bg.jpg) no-repeat center center/cover fixed;
+  background: url(https://res.cloudinary.com/dgy8pc494/image/upload/v1741787440/bg_y5ompl.jpg) no-repeat center center/cover fixed;
   background-color: var(--secondary-color);
   color: var(--primary-color);
   margin: 0;
@@ -55,59 +55,58 @@ label {
 /* Buttons */
 
 .btn-primary {
-    background-color: var(--highlight-color);
-    color: var(--secondary-color);
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 1rem;
-    cursor: pointer;
-    font-size: 1.2rem;
-    font-weight: bold;
+  background-color: var(--highlight-color);
+  color: var(--secondary-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 /* Button class when user selects an answer */
 .btn-select {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 1rem;
-    cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
 }
 
 #btn-resources {
-    color: var(--primary-color);
-    font-size: 160%;
+  color: var(--primary-color);
+  font-size: 160%;
 }
 
 .btn-resources:hover {
-    color: var(--highlight-color-light);
-    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  color: var(--highlight-color-light);
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .btn-primary:hover {
-    background-color: var(--highlight-color-light);
-    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  background-color: var(--highlight-color-light);
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .btn-outline-custom {
-    border: #034c8c solid 1px;
-    color: #034c8c;
-    padding: 0.5rem 1rem;
-    border-radius: 1rem;
-    cursor: pointer;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    text-align: start;
-    font-weight: bold;
+  border: #034c8c solid 1px;
+  color: #034c8c;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: start;
+  font-weight: bold;
 }
 
 .btn-outline-custom:hover {
-    background-color: var(--highlight-color-light);
-    color: var(--secondary-color);
-    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  background-color: var(--highlight-color-light);
+  color: var(--secondary-color);
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
-
 
 /* Header */
 
@@ -172,7 +171,6 @@ img {
   font-weight: bold;
 }
 
-
 .quiz-options {
   border: #034c8c solid 1px;
   color: #034c8c;
@@ -190,7 +188,8 @@ img {
   background-color: var(--highlight-color-light);
   color: var(--secondary-color);
   border: none;
-  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    border 0.3s ease-in-out;
   transform: scale(1.05);
 }
 
@@ -201,14 +200,13 @@ img {
 }
 
 .correct {
- 
 }
 
 .incorrect {
-  color: #AD1010;
+  color: #ad1010;
   background-color: var(--secondary-color);
   box-shadow: 4px 4px 0 0 #ff4b4b;
-  border: #AD1010 solid 2px;
+  border: #ad1010 solid 2px;
   font-weight: bold;
 }
 
@@ -260,7 +258,6 @@ footer .social-links i:hover {
 /* Media Queries */
 
 @media screen and (min-width: 768px) {
-
   #intro {
     margin: 40px 0;
   }
@@ -277,5 +274,4 @@ footer .social-links i:hover {
   #results {
     margin: 5vh 0;
   }
-
 }

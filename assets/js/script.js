@@ -36,7 +36,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-
+  
+  /**
+   * Fetches the selected level's JSON data
+   */
   function playNow() {
     quiz.style.display = "block";
     intro.style.display = "none";
@@ -57,12 +60,18 @@ document.addEventListener("DOMContentLoaded", function () {
       .catch((error) => console.error("Error fetching data:", error));
   }
 
+  /**
+   * Randomly creates array of 14 species from the data
+   */
   function getRandomQuestions(count = 14) {
     randomQuestions = data
     randomQuestions = randomQuestions.sort(() => 0.5 - Math.random()).slice(0, count);
     populateOptions();
   }
 
+  /**
+   * Populates the quiz options with the selected answer and 3 other random options
+   */
   function populateOptions() {
     let randomIndex;
     submitButton.style.display = "inline-block";
@@ -107,6 +116,9 @@ document.addEventListener("DOMContentLoaded", function () {
     submitButton.addEventListener("click", checkAnswer);
   }
 
+  /**
+   * Displays the next question or results if all questions have been answered
+   */
   function showNextQuestion() {
     submitButton.style.display = "inline-block";
     nextQuestion.style.display = "none";
@@ -122,6 +134,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  /**
+   * Adds the selected class to the clicked option
+   */
   function selectOption() {
     optionsElement.forEach((option) => {
       option.addEventListener("click", function () {
@@ -133,6 +148,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  /**
+   * Checks if the selected answer is correct and updates the score 
+   */
   function checkAnswer(event) {
     event.preventDefault(); // Prevent form submission
 
@@ -154,12 +172,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  /**
+   * Increments the question count and updates the display
+   */
   function incrementQuestion() {
     questionsAsked++;
     questionProgress.innerHTML = `Question ${questionsAsked} of ${MAX_QUESTIONS}:`;
     // Update question count display if needed
   }
 
+  /**
+   * Displays the results of the quiz
+   */
   function showResults() {
     quiz.style.display = "none";
     results.style.display = "block";

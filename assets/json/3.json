@@ -1,70 +1,87 @@
 [
     {
         "name": "Bootlace Worm",
-        "image": "assets/images/bootlace-worm.jpg"
+        "backup-image": "assets/images/bootlace-worm.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787423/bootlace-worm_k9vvbl.jpg"
     },
     {
         "name": "Candy Stripe Flatworm",
-        "image": "assets/images/candy-stripe-flatworm.jpg"
+        "backup-image": "assets/images/candy-stripe-flatworm.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787416/candy-striped-flatworm_cnbbav.jpg"
     },
     {
         "name": "Coral worms",
-        "image": "assets/images/coral-worms.jpg"
+        "backup-image": "assets/images/coral-worms.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787424/coral-worms_ikwpra.jpg"
     },
     {
         "name": "Double Spiral Worm",
-        "image": "assets/images/double-spiral-worm.jpg"
+        "backup-image": "assets/images/double-spiral-worm.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787438/double-spiral-worm_odkpvl.jpg"
     },
     {
         "name": "Eyelash Worm",
-        "image": "assets/images/eyelash-worm.jpg"
+        "backup-image": "assets/images/eyelash-worm.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787418/eyelash-worm_kzqy7n.jpg"
     },
     {
         "name": "Football Jersey Worm",
-        "image": "assets/images/football-jersey-worm.jpg"
+        "backup-image": "assets/images/football-jersey-worm.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787420/football-jersey-worm_logtha.jpg"
     },
     {
         "name": "Keelworms",
-        "image": "assets/images/keelworms.jpg"
+        "backup-image": "assets/images/keelworms.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787433/keelworms-and-spiral-worms_pukm6h.jpg"
     },
     {
         "name": "Lugworm",
-        "image": "assets/images/lugworms.jpg"
+        "backup-image": "assets/images/lugworms.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787429/lugworms_q5baes.jpg"
     },
     {
         "name": "Organ Pipe Worm",
-        "image": "assets/images/organ-pipe-worm.jpg"
+        "backup-image": "assets/images/organ-pipe-worm.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787431/organ-pipe-worm_sjy341.jpg"
     },
     {
         "name": "Paddleworm",
-        "image": "assets/images/paddleworm.jpg"
+        "backup-image": "assets/images/paddleworm.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787435/paddleworm-eggs_e9akk1.jpg"
     },
     {
         "name": "Parchment Worm",
-        "image": "assets/images/parchment-worm.jpg"
+        "backup-image": "assets/images/parchment-worm.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787437/parchment-worm_vjtxjw.jpg"
     },
     {
         "name": "Ragworm",
-        "image": "assets/images/ragworms.jpg"
+        "backup-image": "assets/images/ragworms.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787441/ragworms_gf0jqc.jpg"
     },
     {
         "name": "Sand Mason Worm",
-        "image": "assets/images/sand-mason-worm.jpg"
+        "backup-image": "assets/images/sand-mason-worm.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787444/sand-mason-worm_ef2gt8.jpg"
     },
     {
         "name": "Sea Mouse",
-        "image": "assets/images/sea-mouse.jpg"
+        "backup-image": "assets/images/sea-mouse.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787447/sea-mouse_zz1pn1.jpg"
     },
     {
         "name": "Peacock Worm",
-        "image": "assets/images/peacock-worm.jpg"
+        "backup-image": "assets/images/peacock-worm.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787436/peacock-worm_voxgx8.jpg"
     },
     {
         "name": "Red Spotted Horseshoe Worm",
-        "image": "assets/images/red-spotted-horseshoe-worm.jpg"
+        "backup-image": "assets/images/red-spotted-horseshoe-worm.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787442/red-spotted-horseshoe-worm_twickr.jpg"
     },
     {
         "name": "Ross Worm",
-        "image": "assets/images/ross-worm.jpg"
+        "backup-image": "assets/images/ross-worm.jpg",
+        "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787443/ross-worm_amxajd.jpg"
     }
 ]

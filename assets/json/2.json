@@ -1,78 +1,92 @@
 [
   {
     "name": "Beadlet Anemone",
-    "image": "assets/images/beadlet-anemone.jpg"
+    "backup-image": "assets/images/beadlet-anemone.jpg",
+    "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787413/beadlet-anemone_nlwwle.jpg"
   },
   {
     "name": "Burrowing Anemone",
-    "image": "assets/images/burrowing-anemone.jpg"
+    "backup-image": "assets/images/burrowing-anemone.jpg",
+    "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787421/burrowing-anemone2_lc7kdv.jpg"
   },
   {
     "name": "Dahlia Anemone",
-    "image": "assets/images/dahlia-anemone.jpg"
-  },
-  {
-    "name": "Burrowing Anemone",
-    "image": "assets/images/burrowing-anemone2.jpg"
+    "backup-image": "assets/images/dahlia-anemone.jpg",
+    "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787439/dahlia-anemone_zjgvfg.jpg"
   },
   {
     "name": "Compasss Jellyfish",
-    "image": "assets/images/compass-jellyfish.jpg"
+    "backup-image": "assets/images/compass-jellyfish.jpg",
+    "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787415/compass-jellyfish_epkley.jpg"
   },
   {
     "name": "Daisy Anemone",
-    "image": "assets/images/daisy-anemone.jpg"
+    "backup-image": "assets/images/daisy-anemone.jpg",
+    "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787436/daisy-anemone_nuzjel.jpg"
   },
   {
     "name": "Devonshire Cup Coral",
-    "image": "assets/images/devonshire-cup-coral.jpg"
+    "backup-image": "assets/images/devonshire-cup-coral.jpg",
+    "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787425/devonshire-cup-coral_j2a1nd.jpg"
   },
   {
     "name": "Elegant Anemone",
-    "image": "assets/images/elegant-anemone.jpg"
+    "backup-image": "assets/images/elegant-anemone.jpg",
+    "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787418/elegant-anemone_yhfs8y.jpg"
   },
   {
     "name": "Horseman Anemone",
-    "image": "assets/images/horseman-anemone.jpg"
+    "backup-image": "assets/images/horseman-anemone.jpg",
+    "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787427/horseman-anemone_h5rxdt.jpg"
   },
   {
     "name": "Jewel Anemone",
-    "image": "assets/images/jewel-anemone.jpg"
+    "backup-image": "assets/images/jewel-anemone.jpg",
+    "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787432/jewel-anemone_yv79yo.jpg"
   },
   {
     "name": "Orange Anemone",
-    "image": "assets/images/orange-anemone.jpg"
+    "backup-image": "assets/images/orange-anemone.jpg",
+    "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787430/orange-anemone_eghgtf.jpg"
   },
   {
     "name": "Plumose Anemone",
-    "image": "assets/images/plumose-anemone.jpg"
+    "backup-image": "assets/images/plumose-anemone.jpg",
+    "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787433/plumose-anemone_gyyr3o.jpg"
   },
   {
     "name": "Scarlet and Gold Star Coral",
-    "image": "assets/images/scarlet-and-gold-star-coral.jpg"
+    "backup-image": "assets/images/scarlet-and-gold-star-coral.jpg",
+    "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787445/scarlet-and-gold-star-coral_pgcsmn.jpg"
   },
   {
     "name": "Sealoch Anemone",
-    "image": "assets/images/sealoch-anemone.jpg"
+    "backup-image": "assets/images/sealoch-anemone.jpg",
+    "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787446/sealoch-anemone_jmiwjz.jpg"
   },
   {
     "name": "Snakelocks Anemone",
-    "image": "assets/images/snakelocks-anemone.jpg"
+    "backup-image": "assets/images/snakelocks-anemone.jpg",
+    "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787448/snakelocks-anemone_bmbe8g.jpg"
   },
   {
     "name": "Strawberry Anemone",
-    "image": "assets/images/strawberry-anemone.jpg"
+    "backup-image": "assets/images/strawberry-anemone.jpg",
+    "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787410/strawberry-annemone_wuqzjm.jpg"
   },
   {
     "name": "Southern Cup Coral",
-    "image": "assets/images/southern-cup-coral.jpg"
+    "backup-image": "assets/images/southern-cup-coral.jpg",
+    "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787411/southern-cup-coral_ps82kr.jpg"
   },
   {
     "name": "White-striped Anemone",
-    "image": "assets/images/white-striped-anemone.jpg"
+    "backup-image": "assets/images/white-striped-anemone.jpg",
+    "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787416/white-striped-anemone_ekfv0d.jpg"
   },
   {
     "name": "Sunset Cup Coral",
-    "image": "assets/images/sunset-cup-coral.jpg"
+    "backup-image": "assets/images/sunset-cup-coral.jpg",
+    "image": "https://res.cloudinary.com/dgy8pc494/image/upload/v1741787411/sunset-cup-coral_ygzzw2.jpg"
   }
 ]
